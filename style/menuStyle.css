@@ -1,0 +1,157 @@
+.toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-position: 5px;
+  z-index: 1000;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#menu a:link,
+#menu a:visited {
+  color: #b0ffdb;
+  text-decoration: none;
+}
+
+.content-menu a:hover {
+  color: #b0ffdb;
+}
+
+.overlay-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay-menu:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-menu {
+  margin: 70px auto;
+  padding: 20px;
+  background: #404040;
+  border-radius: 0.5em;
+  width: 80%;
+  height: 80%;
+  position: relative;
+  transition: all 2s ease-in-out;
+}
+
+.content-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
+}
+
+.popup-menu .close-menu {
+  position: absolute;
+  top: 10px;
+  right: 35px;
+  transition: all 200ms;
+}
+
+.close-menu .close-cross {
+  font-size: 80px;
+}
+
+.popup-menu .close-menu:hover {
+  color: #b0ffdb;
+}
+
+.popup-menu .content-menu {
+  overflow: auto;
+}
+
+.popup-menu .content-menu p {
+  margin-top: 1em;
+  font-size: 1em;
+  text-align: start;
+}
+
+#menu ul {
+  position: relative;
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+#menu ul li {
+  list-style: none;
+  margin: 1.5em 0;
+}
+
+#menu a {
+  margin-bottom: 0.5em;
+  text-decoration: none;
+  justify-content: center;
+  color: #b0ffdb;
+  font-size: 3em;
+  text-align: center;
+  display: block;
+  font-family: sans-serif;
+  opacity: 1;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 1200px) {
+  .work .content {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .work .content {
+    margin-left: 1.2em;
+    margin-right: 1.2em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .work .content {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+
+  .toggle {
+    top: 15px;
+    right: 15px;
+    width: 36px;
+    height: 36px;
+  }
+
+  img {
+    height: 24px;
+    width: 36px;
+  }
+
+  .popup-menu .close-menu {
+    top: 5px;
+    right: 20px;
+  }
+
+  .close-menu .close-cross {
+    font-size: 40px;
+  }
+
+  #menu a {
+    margin-bottom: 1em;
+    font-size: 1.5em;
+  }
+}

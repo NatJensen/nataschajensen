@@ -1,0 +1,29 @@
+.projects .content {
+  margin-left: 3.2em;
+  margin-right: 3.2em;
+  height: 600px;
+}
+
+#projects a:link,
+a:visited {
+  color: #404040;
+  text-decoration: none;
+}
+
+#projects a:hover {
+  font-weight: bold;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 600px) {
+  .projects .content {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    height: 500px;
+  }
+
+  .projects .content p {
+    margin: 0.2em 1em;
+  }
+}

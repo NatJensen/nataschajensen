@@ -1,0 +1,16 @@
+.education .content {
+  height: 700px; 
+}
+
+#education .content p {
+  margin: 0 5em 1.2em 5em;
+}
+
+/* Media queries */
+
+
+@media screen and (max-width: 600px) {
+  .education .content {
+    height: 500px; 
+  }
+}
